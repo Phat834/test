@@ -47,15 +47,15 @@
         <input type="text" id="username">
 
         <label>Mat khau</label>
-        <input type="password" id="password">
+        <input type="password" id="txtpassword">
 
-        <button onclick="login()">Dang nhap</button>
+        <button id="btnlogin" onclick="login()">Dang nhap</button>
     </div>
 
     <script>
     function login() {
         var user = document.getElementById("username").value;
-        var pass = document.getElementById("password").value;
+        var pass = document.getElementById("txtpassword").value;
 
         if (user === "admin" && pass === "admin") {
             alert("Dang nhap thanh cong");
