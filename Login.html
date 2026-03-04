@@ -33,36 +33,39 @@
             cursor: pointer;
         }
 
-            button:hover {
-                background-color: #0056b3;
-            }
+        button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- FORM LOGIN -->
     <div class="login-box">
         <h2>Dang nhap</h2>
 
         <label>Ten dang nhap</label>
-        <input type="text" id="username">
+        <input type="text" id="textboxusername">
 
         <label>Mat khau</label>
-        <input type="password" id="txtpassword">
+        <input type="password" id="textboxmatkhau">
 
         <button id="btnlogin" onclick="login()">Dang nhap</button>
     </div>
 
     <script>
-    function login() {
-        var user = document.getElementById("username").value;
-        var pass = document.getElementById("txtpassword").value;
+        function login() {
+            var user = document.getElementById("textboxusername").value;
+            var pass = document.getElementById("textboxmatkhau").value;
 
-        if (user === "admin" && pass === "admin") {
-            alert("Dang nhap thanh cong");
-        } else {
-            alert("Sai tai khoan hoac mat khau");
+            if (user === "admin" && pass === "admin") {
+                // Chuyển sang trang thành công
+                window.location.href = "success.html";
+            } else {
+                alert("Sai tai khoan hoac mat khau");
+            }
         }
-    }
     </script>
 
 </body>
